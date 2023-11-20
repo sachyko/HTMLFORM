@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+  <head>
+    <title>How a Form Works in HTML</title>
+  </head>
+  <body>
+    
+    <div class="header">
+        <h1>Cheatsheet: <br>How a Form Works in HTML</h1>
+        </div>
+    
+    <!--Content -->
+        <div class="topic">
+            <h2>What is a Form?</h2>
+            <p>We can see forms in our day-to-day life. When we go to a bank to make an <br>
+                account, applying for a college that you dreamed of or for jobs, we use forms<br>
+                to write a personal information and give it to personnel to process it. Just like<br>
+                a physical form, HTML &lt;form&gt; collects the information and send it somewhere else.
+            <br>
+            <br>
+            <span class="code">&lt;form action ="/example.html"<br>method="Post"&gt;&lt;/form&gt;</span>
+            <br>
+            <br>
+            In this example, the <em>action</em> attribute is to know where the information is sent<br>
+            method attribute as request in the HTTP. 
+            </p>
+        </div>
+
+        <div class="topic">
+            <h2 id="text-input">Text Input</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Tag/Attribute Name</th>
+                <th scope="col">Actual Formatted Tag</th>
+                <th scope="col">Description</th>
+                <th scope="col">Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Input type, name</td>
+                <td>&lt;input type&gt;<br>&lt;input type="text" name="first-text field"&gt;</td>
+                <td><ul>
+                    <li>The &lt;input&gt; has a type attribute to determine
+                    how it renders on the web page and what kind of data
+                    it can accept.</li>
+                    <li>A name attribute for the &lt;input&gt;
+                     is include, without the name attribute the
+                    information won't be send if the form is submitted.</li></ul></td>
+                <td>&lt;form action=”/example.html” method=”POST”&gt;<br>
+                    &lt;input type=”text” name=”first-text-field”&gt; &lt;/form&gt;</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <div class="topic">
+            <h2 id="label">Adding a Label</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                  <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>label</td>
+                    <td>&lt;label&gt;</td>
+                    <td>To properly identify an &lt;input&gt;
+                    </td>
+                    <td>&lt;form action=”/example.html”method=”POST”&gt;<br>
+                        &lt;label for=”toppings”&gt;What do you want for your icecream?&lt;/label&gt;<br>
+                        &lt;br&gt; <br>
+                        &lt;input type=”text” name=”marshmallow” id=”toppings”&gt;<br>
+                    &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       
+        <div class="topic">
+            <h2>Password Input</h2>
+    
+        <table>
+        <thead>
+            <tr>
+                <th scope="col">Tag/Attribute Name</th>
+                <th scope="col">Actual Formatted Tag</th>
+                <th scope="col">Description</th>
+                <th scope="col">Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>input type="password"</td>
+                <td>&lt;input type="password&gt;</td>
+                <td>A string of characters to confirm user's identity
+                </td>
+                <td>&lt;form&gt;<br>
+                    &lt;label for=”user-password”&gt;Password&lt;/label&gt; <br>
+                    &lt;br&gt;
+                    &lt;input type=”password” id=”user-password” name=”user-password”&gt;<br>
+                    &lt;/form&gt;</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  
+
+        <div class="topic">
+            <h2>Number Input</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>input type="number"</td>
+                    <td>&lt;input type="number"&gt;</td>
+                    <td>To let users type in a number
+                    </td>
+                    <td>&lt;form&gt;<br>
+                        &lt;label for=”years”&gt;Years of Experience&lt;/label&gt;<br>
+                        &lt;br&gt; <br>
+                        &lt;input id=”years” type=”number” step=”1”&gt;<br>
+                    &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+        <div class="topic">
+            <h2>Range Input</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>input type="range"</td>
+                    <td>&lt;input type="number" min="0" max="100" step="1"&gt;</td>
+                    <td>To limit what numbers the users could type which will create<br> 
+                        a slider.<br>
+                        <br>
+                        <strong>Notes:</strong>
+                        <ul>
+                            <li>to set the minimum and maximum values of the 
+                        slider assign values to the min and max attribute.</li>
+                            <li>Step attribute control how smooth and fluid the slider works.
+                        Smaller step values will make the slider move more fluidly.</li></ul></td>
+                    <td>&lt;form&gt;<br>
+                        &lt;label for=”years”&gt;Years of Experience&lt;/label&gt;<br>
+                        &lt;br&gt; <br>
+                        &lt;input id=”years” type=”number” step=”1”&gt;<br>
+                        &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+        <div class="topic">
+            <h2>Checkbox Input</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>input type="checkbox"</td>
+                    <td>&lt;input type="checkbox"&gt;</td>
+                    <td>To present multiple options that allow users to select any number
+                        of given options.</td>
+                        <td>&lt;form&gt;<br>
+                            &lt;p&gt;Choose your pizza toppings&lt;/p&gt;<br>
+                            &lt;br&gt; <br>
+                            &lt;label for="cheese"&gt;Extra Cheese &lt;/label&gt;<br>
+                            &lt;input id="cheese" name"topping type="checkbox" value="cheese"&gt;<br>
+                            &lt;br&gt;<br>
+                            &lt;label for="pepperoni"&gt;Pepperoni &lt;/label&gt;<br>
+                            &lt;input id="pepperoni" name"topping type="checkbox" value="pepperoni"&gt;<br>
+                            &lt;br&gt;<br>
+                            &lt;label for="anchovy"&gt;Anchovy &lt;/label&gt;<br>
+                            &lt;input id="anchovy" name"topping type="checkbox" value="anchovy"&gt;<br>
+                            &lt;br&gt;<br>
+                            &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <div class="topic">
+            <h2>Radio Button Input</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>input type="radio"</td>
+                    <td>&lt;input type="radio"&gt;</td>
+                    <td>To present multiple options that allow users to select only one option.</td>
+                    <td>&lt;form&gt;<br>
+                        &lt;p&gt;Are you a night owl? &lt;/p&gt;<br>
+                        &lt;input type="radio" id="yes" name="answer" value="Yes"&gt; <br>
+                        &lt;label for="Yes"&gt;Yes, I am. &lt;/label&gt;<br>
+                        &lt;br&gt;<br>
+                        &lt;input type="radio" id="no" name="answer" value="No"&gt;<br>
+                        &lt;br&gt;<br>
+                        &lt;label for="No"&gt;No, I'm not. &lt;/label&gt;<br>
+                        &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+        <div class="topic">
+            <h2>Dropdown List</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>option value</td>
+                    <td>&lt;option value="info"&gt;info&lt;/option&gt;</td>
+                    <td>To allow users to choose one option from an organized list.</td>
+                    <td>&lt;form&gt;<br>
+                        &lt;label for="animal"&gt;What animal do you like? &lt;/label&gt;<br>
+                        &lt;select id="animal" name="animal"&gt; <br>
+                        &lt;option value="dog"&gt;Dog&lt;/option&gt;<br>
+                        &lt;br&gt;<br>
+                        &lt;option value="cat"&gt;Cat&lt;/option&gt;<br>
+                        &lt;br&gt;<br>
+                        &lt;option value="rabbit"&gt;Rabbit&lt;/option&gt;<br>
+                        &lt;option value="fish"&gt;Fish&lt;/option&gt;<br>
+                        &lt;option value="hamster"&gt;Hamster&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                        &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <div class="topic">
+            <h2>Datalist Input</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>datalist</td>
+                    <td>&lt;datalist id ="info"&gt;<br>
+                        &lt;option value="info"&gt;&lt;/option&gt;<br>&lt;/datalist&gt;</td>
+                    <td>To allow users to type in the input field to search for a
+                        particular. And if there's not option match, the user can still
+                        use what they typed in</td>
+                        <td>&lt;form&gt;<br>
+                            &lt;label for="city"&gt;Ideal City to Visit? &lt;/label&gt;<br>
+                            &lt;input type="text" list="cities" id="city" name="city"&gt; <br>
+                            &lt;datalist id="cities"&gt;<br>
+                            &lt;option value ="New York City"&gt;&lt;/option&gt;<br>
+                            &lt;option value ="Tokyo"&gt;&lt;/option&gt;<br>
+                            &lt;option value ="Barcelona"&gt;&lt;/option&gt;<br>
+                            &lt;option value ="Melbourne"&gt;&lt;/option&gt;<br>
+                            &lt;option value ="Other"&gt;&lt;/option&gt;<br>
+                            &lt;/datalist&gt;
+                            &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <div class="topic">
+            <h2>Textarea Element</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>textarea</td>
+                    <td>&lt;textarea&gt;&lt;/textarea&gt;</td>
+                    <td>To create a bigger text field for the users to write more text. </td>
+                    <td>&lt;form&gt;<br>
+                        &lt;label for=”blog”&gt;New Blog Post:&lt;/label&gt;<br>
+                        &lt;br&gt; <br>
+                        &lt;text area id="blog" name="blog" rows="5" cols="30"&gt;<br>
+                        &lt;/textarea&gt;
+                        &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <div class="topic">
+            <h2>Submit Form</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Tag/Attribute Name</th>
+                    <th scope="col">Actual Formatted Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Code</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>input type="submit"</td>
+                    <td>&lt;input type="submit"&gt;</td>
+                    <td>To collect the information that will be submitted. </td>
+                    <td>&lt;form&gt; <br>
+                        &lt;input type="submit" value="Send&gt
+                        &lt;/form&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    <footer>
+       <h4>Created by:Sachiko Ponpon</h4>
+    </footer>
+    
+  </body>
