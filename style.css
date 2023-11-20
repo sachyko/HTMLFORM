@@ -1,0 +1,64 @@
+* {
+    background-color:#ffdab3;
+}
+
+h1  {
+    background-image: url('images/laptop.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.header h1 {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    color: #fff7e6;
+}
+
+.topic h2 {
+    background-color: #ff9999;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    padding: 20px;
+}
+p {
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+}
+.code {
+    background-color: #ffcccc;
+    font-size: 20px;
+    text-align: center;
+    
+
+}
+
+table {
+    border-collapse: collapse;
+ }
+
+ table,
+ th,
+ td {
+    border: 2px solid #8c6b48;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+ }
+ 
+ table {
+    text-align: center;
+    margin: 20px auto;
+ }
+ 
+ td {
+    width: 350px;
+ }
+
+ footer {
+    font-size: 20px;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: right;
+    margin: 70px auto;
+ }
